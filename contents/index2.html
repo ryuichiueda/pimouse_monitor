@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">    <!--jaに変更-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; （以後略）-->
+    <title>Pimouse Monitor</title>   <!--変更-->
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Pimouse Monitor</a>   <!--変更-->
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="padding-top:60px">
+      <div class="row">
+        <div class="col-md-4" id="lightsensors"><span id="lightsensors"></span></div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+
