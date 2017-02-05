@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">    <!--jaに変更-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; （以後略）-->
+    <title>Pimouse Monitor</title>   <!--変更-->
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Pimouse Monitor</a>   <!--変更-->
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="padding-top:60px">
+      <div class="row">
+        <div class="col-md-4" id="lightsensors">
+          <h2>Light Sensors</h2>
+          <table class="table table-striped">
+            <tr><th>DIRECTION</th><th>VALUE</th></tr>
+            <tr><td>left_forward</td><td id="left_forward"></td></tr>
+            <tr><td>left_side</td><td id="left_side"></td></tr>
+            <tr><td>right_side</td><td id="right_side"></td></tr>
+            <tr><td>right_forward</td><td id="right_forward"></td></tr>
+            <tr><td>sum_all</td><td id="sum_all"></td></tr>
+            <tr><td>sum_forward</td><td id="sum_forward"></td></tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <h2>Camera</h2>
+          <object id="camstream" style="width:300px;height:240px" ></object>
+        </div>
+        <div class="col-md-4">
+          <h2>Motors <button type="button" class="btn btn-danger" id="motor_on">ON</button>
+          <button type="button" class="btn btn-primary" id="motor_off">OFF</button></h2>
+          <div id="touchmotion" class="well" style="width:300px;height:300px;cursor:pointer">
+            <span id="vel_fw">0</span>[mm/s]&nbsp;<span id="vel_rot">0</span>[deg/s]
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+
