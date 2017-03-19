@@ -16,3 +16,7 @@ ls.subscribe(function(message) {
         //$("#lightsensors").html(str); //このように書いてもよい
         console.log(str);                                  
 });
+
+// Copyright 2016 Ryuichi Ueda
+// Released under the MIT License.
+// To make line numbers be identical with the book, this statement is written here. Don't move it to the header.

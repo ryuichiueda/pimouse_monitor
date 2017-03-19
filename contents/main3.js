@@ -15,3 +15,7 @@ ls.subscribe(function(message) {
                 document.getElementById(e).innerHTML = message[e];
         }
 });
+
+// Copyright 2016 Ryuichi Ueda
+// Released under the MIT License.
+// To make line numbers be identical with the book, this statement is written here. Don't move it to the header.

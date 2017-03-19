@@ -19,3 +19,7 @@ ls.subscribe(function(message) {
 document.getElementById('camstream').data = 'http://'
         + location.hostname
         + ':10000/stream?topic=/cv_camera_node/image_raw';
+
+// Copyright 2016 Ryuichi Ueda
+// Released under the MIT License.
+// To make line numbers be identical with the book, this statement is written here. Don't move it to the header.
