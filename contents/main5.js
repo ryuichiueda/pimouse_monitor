@@ -30,7 +30,7 @@ var off = new ROSLIB.Service({
 });
 
 $('#motor_on').on('click', function(e){
-        on.callService(ROSLIB.ServiceRequest(),function(result){
+        on.callService(new ROSLIB.ServiceRequest(),function(result){
                 if(result.success){
                         $('#motor_on').attr('class','btn btn-danger');
                         $('#motor_off').attr('class','btn btn-default');
@@ -40,7 +40,7 @@ $('#motor_on').on('click', function(e){
 });
         
 $('#motor_off').on('click', function(e){
-        off.callService(ROSLIB.ServiceRequest(),function(result){
+        off.callService(new ROSLIB.ServiceRequest(),function(result){
                 if(result.success){
                         $('#motor_on').attr('class','btn btn-default');
                         $('#motor_off').attr('class','btn btn-primary');
@@ -55,12 +55,12 @@ var vel = new ROSLIB.Topic({
 });
 
 function pubMotorValues(){
-        fw = $('#vel_fw').html();
-        rot = $('#vel_rot').html();
+        var fw = $('#vel_fw').html();
+        var rot = $('#vel_rot').html();
 
         fw = parseInt(fw)*0.001;
         rot = 3.141592*parseInt(rot)/180;
-        v = new ROSLIB.Message({linear:{x:fw,y:0,z:0}, angular:{x:0,y:0,z:rot}});
+        var v = new ROSLIB.Message({linear:{x:fw,y:0,z:0}, angular:{x:0,y:0,z:rot}});
         vel.publish(v);
 }
 
