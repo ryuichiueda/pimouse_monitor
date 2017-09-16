@@ -30,7 +30,7 @@ var off = new ROSLIB.Service({
 });
 
 $('#motor_on').on('click', function(e){
-        on.callService(ROSLIB.ServiceRequest(),function(result){
+        on.callService(new ROSLIB.ServiceRequest(),function(result){
                 if(result.success){
                         $('#motor_on').attr('class','btn btn-danger');
                         $('#motor_off').attr('class','btn btn-default');
@@ -40,7 +40,7 @@ $('#motor_on').on('click', function(e){
 });
         
 $('#motor_off').on('click', function(e){
-        off.callService(ROSLIB.ServiceRequest(),function(result){
+        off.callService(new ROSLIB.ServiceRequest(),function(result){
                 if(result.success){
                         $('#motor_on').attr('class','btn btn-default');
                         $('#motor_off').attr('class','btn btn-primary');
