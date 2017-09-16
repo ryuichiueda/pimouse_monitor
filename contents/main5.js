@@ -55,12 +55,12 @@ var vel = new ROSLIB.Topic({
 });
 
 function pubMotorValues(){
-        fw = $('#vel_fw').html();
-        rot = $('#vel_rot').html();
+        var fw = $('#vel_fw').html();
+        var rot = $('#vel_rot').html();
 
         fw = parseInt(fw)*0.001;
         rot = 3.141592*parseInt(rot)/180;
-        v = new ROSLIB.Message({linear:{x:fw,y:0,z:0}, angular:{x:0,y:0,z:rot}});
+        var v = new ROSLIB.Message({linear:{x:fw,y:0,z:0}, angular:{x:0,y:0,z:rot}});
         vel.publish(v);
 }
 
