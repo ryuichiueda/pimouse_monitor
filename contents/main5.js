@@ -59,7 +59,7 @@ function pubMotorValues(){
         var rot = $('#vel_rot').html();
 
         fw = parseInt(fw)*0.001;
-        rot = 3.141592*parseInt(rot)/180;
+        rot = Math.PI*parseInt(rot)/180;
         var v = new ROSLIB.Message({linear:{x:fw,y:0,z:0}, angular:{x:0,y:0,z:rot}});
         vel.publish(v);
 }
